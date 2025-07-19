@@ -46,10 +46,33 @@ namespace Class01_OOP
                         return PhoneNumero[i];
             return -1;
         }
+
+            // Setter Fn 
+            public int SetPhoneNum(string Name,int Num)
+        {
+            if (Name is not null && PhoneNumero != null)
+                for (int i = 0; i < Names.Length; i++)
+                    if (Names[i] == Name)
+                    {
+                        PhoneNumero[i] = Num;
+                        return PhoneNumero[i];
+                    }
+            return -1;
+        }
         #endregion
 
         #region Properties
-            
+
+            // Adding indexer property " Special property " .. deal with Object as if its array
+            public int this[string Name]{
+              get{
+                if (Name is not null && PhoneNumero is not null)
+                    for (int i = 0; i < Names.Length; i++)
+                        if (Names[i] == Name)
+                            return PhoneNumero[i];
+                return -1;
+            }
+             }
 
         #endregion
     }
