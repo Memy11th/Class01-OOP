@@ -72,6 +72,17 @@ namespace Class01_OOP
                             return PhoneNumero[i];
                 return -1;
             }
+
+            set
+            {
+                if (Name is not null && PhoneNumero != null)
+                    for (int i = 0; i < Names.Length; i++)
+                        if (Names[i] == Name)
+                        {
+                            PhoneNumero[i] = value;
+                            break;
+                        }
+            }
              }
 
         #endregion
