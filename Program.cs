@@ -10,6 +10,10 @@
             #endregion
 
             #region Encapsulation
+            // Applying encapsulation made me know exactly the benefits of encapsulation 
+            // Easy to rename or edit source code in class 
+            // Validation on data
+            // Get or set or both 
             Employee Emp01 = new Employee(1, "Memy", 25000);
             Console.WriteLine(Emp01);
             Emp01.SetName("Memy jr");
@@ -18,6 +22,10 @@
             Emp01.Salaryy = 25;
             Console.WriteLine(Emp01.Salaryy);
             #endregion
+
+
+
+
         }
     }
 }
